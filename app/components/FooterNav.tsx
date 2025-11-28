@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const FooterNav = () => {
     return (
@@ -27,19 +28,19 @@ const FooterNav = () => {
                     <div className='lg:border-r border-white'>
                         <h4 className="text-sm lg:mb-6 mb-4">Explore</h4>
                         <ul className="space-y-3 lg:text-base text-sm">
-                            <li>About us</li>
-                            <li>Services</li>
-                            <li>Industries</li>
-                            <li>Contact us</li>
+                            <li><Link to="/about" className="">About us</Link></li>
+                            <li><Link to="/" className="">Services</Link></li>
+                            <li><Link to="/#industries" className="">Industries</Link></li>
+                            <li><Link to="/contact" className="">Contact us</Link></li>
                         </ul>
                     </div>
                     <div className='lg:border-r border-white'>
                         <h4 className="text-sm lg:mb-6 mb-4">Services</h4>
                         <ul className="space-y-3 lg:text-base text-sm">
-                            <li>CNC Milling</li>
-                            <li>CNC Turning</li>
-                            <li>5-Axis CNC Machining</li>
-                            <li>Finishing</li>
+                            <li><Link to="/" className="">CNC Milling</Link></li>
+                            <li><Link to="/" className="">CNC Turning</Link></li>
+                            <li><Link to="/" className="">5-Axis CNC Machining</Link></li>
+                            <li><Link to="/" className="">Finishing</Link></li>
                         </ul>
                     </div>
                     <div className='lg:border-r border-white lg:col-span-1 col-span-2'>
