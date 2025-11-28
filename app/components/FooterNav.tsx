@@ -37,10 +37,10 @@ const FooterNav = () => {
                     <div className='lg:border-r border-white'>
                         <h4 className="text-sm lg:mb-6 mb-4">Services</h4>
                         <ul className="space-y-3 lg:text-base text-sm">
-                            <li><Link to="/" className="">CNC Milling</Link></li>
-                            <li><Link to="/" className="">CNC Turning</Link></li>
-                            <li><Link to="/" className="">5-Axis CNC Machining</Link></li>
-                            <li><Link to="/" className="">Finishing</Link></li>
+                            <li><Link to="/services/cnc-milling" className="">CNC Milling</Link></li>
+                            <li><Link to="/services/cnc-turning" className="">CNC Turning</Link></li>
+                            <li><Link to="/services/5-axis-cnc-machining" className="">5-Axis CNC Machining</Link></li>
+                            <li><Link to="/services/finishing" className="">Finishing</Link></li>
                         </ul>
                     </div>
                     <div className='lg:border-r border-white lg:col-span-1 col-span-2'>
