@@ -2,7 +2,7 @@ import FooterNav from "~/components/FooterNav";
 import type { Route } from "./+types/home";
 import HeaderNav from "~/components/HeaderNav";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Autoplay } from 'swiper/modules';
+import { EffectFade, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
@@ -80,6 +80,62 @@ export default function Home() {
       <section className="mb-20 max-w-full lg:pl-20">
         <h3 className="text-5xl font-bold mb-8">Our Services</h3>
 
+        <div className="relative">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            breakpoints={{
+              640: {
+                slidesPerView: 1.2,
+              },
+              1024: {
+                slidesPerView: 3.2,
+              },
+            }}
+            navigation={{
+              nextEl: '.custom-swiper-next',
+              prevEl: '.custom-swiper-prev',
+            }}
+            modules={[Navigation]}
+            className="w-full h-full"
+          >
+            {[
+              {
+                title: "CNC Milling",
+                image: "/images/services/ene-engineering-cnc-milling-services-homepage.jpg"
+              },
+              {
+                title: "CNC Turning",
+                image: "/images/services/ene-engineering-cnc-turnung-services-homepage.jpg"
+              },
+              {
+                title: "5-Axis CNC Machining",
+                image: "/images/services/ene-engineering-5-axis-cnc-machining-services-homepage.jpg"
+              },
+              {
+                title: "Finishing",
+                image: "/images/services/ene-engineering-cnc-finishing-services-homepage.jpg"
+              },
+            ].map((service, index) => (
+              <SwiperSlide key={index} className="relative">
+                <div className="absolute inset-0 bg-black opacity-30"></div>
+                <img src={service.image} alt={service.title} className="w-full" />
+                <div className="absolute flex flex-col justify-between left-0 bottom-0 top-0 z-10 p-6 text-white">
+                  <h4 className="text-2xl font-semibold">{service.title}</h4>
+                  <img className="w-10" src="/images/icons/arrow-right.svg" alt="" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="flex gap-6 justify-end mr-20 mt-6">
+            <button className="custom-swiper-prev">
+              <img src="/images/icons/left-icon.svg" alt="Previous" className="w-16 rounded-full h-16" />
+            </button>
+            <button className="custom-swiper-next">
+              <img src="/images/icons/right-icon.svg" alt="Next" className="w-16 rounded-full h-16" />
+            </button>
+          </div>
+        </div>
       </section>
 
       <section className="max-w-7xl mx-auto mb-20">
