@@ -31,10 +31,10 @@ const HeaderNav = () => {
                             onMouseEnter={() => setServicesOpen(true)}
                             onMouseLeave={() => setServicesOpen(false)}
                         >
-                            <li><Link to="/services/cnc-milling" className="block px-4 py-2 border-b border-black">CNC Milling</Link></li>
-                            <li><Link to="/services/cnc-turning" className="block px-4 py-2 border-b border-black">CNC Turning</Link></li>
-                            <li><Link to="/services/5-axis-cnc-machining" className="block px-4 py-2 border-b border-black">5-Axis CNC Machining</Link></li>
-                            <li><Link to="/services/finishing" className="block px-4 py-2">Finishing</Link></li>
+                            <li><Link to="/services/cnc-milling" className="block px-4 py-2 border-b border-black cursor-pointer">CNC Milling</Link></li>
+                            <li><Link to="/services/cnc-turning" className="block px-4 py-2 border-b border-black cursor-pointer">CNC Turning</Link></li>
+                            <li><Link to="/services/5-axis-cnc-machining" className="block px-4 py-2 border-b border-black cursor-pointer">5-Axis CNC Machining</Link></li>
+                            <li><Link to="/services/finishing" className="block px-4 py-2 cursor-pointer">Finishing</Link></li>
                         </ul>
                     </li>
                     <Link to="/industries">

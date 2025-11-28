@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import { Link } from "react-router";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -104,19 +105,23 @@ export default function Home() {
               {[
                 {
                   title: "CNC Milling",
-                  image: "/images/services/ene-engineering-cnc-milling-services-homepage.jpg"
+                  image: "/images/services/ene-engineering-cnc-milling-services-homepage.jpg",
+                  link: "/services/cnc-milling"
                 },
                 {
                   title: "CNC Turning",
-                  image: "/images/services/ene-engineering-cnc-turnung-services-homepage.jpg"
+                  image: "/images/services/ene-engineering-cnc-turnung-services-homepage.jpg",
+                  link: "/services/cnc-turning"
                 },
                 {
                   title: "5-Axis CNC Machining",
-                  image: "/images/services/ene-engineering-5-axis-cnc-machining-services-homepage.jpg"
+                  image: "/images/services/ene-engineering-5-axis-cnc-machining-services-homepage.jpg",
+                  link: "/services/5-axis-cnc-machining"
                 },
                 {
                   title: "Finishing",
-                  image: "/images/services/ene-engineering-cnc-finishing-services-homepage.jpg"
+                  image: "/images/services/ene-engineering-cnc-finishing-services-homepage.jpg",
+                  link: "/services/finishing"
                 },
               ].map((service, index) => (
                 <SwiperSlide key={index} className="relative">
@@ -124,7 +129,9 @@ export default function Home() {
                   <img src={service.image} alt={service.title} className="w-full" />
                   <div className="absolute flex flex-col justify-between left-0 bottom-0 top-0 z-10 p-6 text-white">
                     <h4 className="text-2xl font-semibold">{service.title}</h4>
-                    <img className="w-10" src="/images/icons/arrow-right.svg" alt="" />
+                    <Link to={service.link} className="mt-4">
+                      <img className="w-10 cursor-pointer" src="/images/icons/arrow-right.svg" alt="" />
+                    </Link>
                   </div>
                 </SwiperSlide>
               ))}
