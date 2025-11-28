@@ -7,7 +7,7 @@ const HeaderNav = () => {
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
     return (
         <header className="w-full">
-            <nav className="flex items-center justify-between px-8 py-4 bg-white border-b border-[#EBEBEB]">
+            <nav className="flex items-center justify-between lg:px-10 px-4 py-4 bg-white border-b border-[#EBEBEB]">
                 <img src="/images/ene-engineering-logo.svg" alt="ENE Engineering Logo" />
                 {/* Desktop Nav */}
                 <ul className="hidden md:flex space-x-10 text-sm relative">

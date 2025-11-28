@@ -1,6 +1,7 @@
 import FooterNav from "~/components/FooterNav";
 import type { Route } from "./+types/home";
 import HeaderNav from "~/components/HeaderNav";
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -37,7 +38,7 @@ export default function Home() {
       {/* Header & Hero Section */}
       <HeaderNav />
 
-      <section className="relative h-[90vh] flex items-end justify-start p-10 bg-black">
+      <section className="relative lg:h-[90vh] h-[70vh] flex items-end justify-start lg:p-10 p-4 bg-black">
         <div className="absolute inset-0 w-full h-full">
           <Swiper
             slidesPerView={1}
@@ -68,130 +69,176 @@ export default function Home() {
 
       <section className="max-w-5xl mx-auto py-20 px-6 text-center">
         <h2 className="text-xs mb-6">WE ARE ENE ENGINEERING</h2>
-        <p className="text-5xl font-light mb-12">At ENE Engineering, we help industries worldwide innovate faster and operate more efficiently through advanced precision engineering.</p>
+        <p className="lg:text-5xl text-3xl font-light mb-12">At ENE Engineering, we help industries worldwide innovate faster and operate more efficiently through advanced precision engineering.</p>
       </section>
 
-      <div className="max-w-7xl mx-auto">
-        <video className="w-full mb-20" autoPlay loop muted>
-          <source src="/images/ene-engineering-video.mp4" type="video/mp4" />
-        </video>
-      </div>
+      <main className="lg:mx-0 mx-4">
+        <div className="max-w-7xl mx-auto">
+          <video className="w-full mb-20" autoPlay loop muted>
+            <source src="/images/ene-engineering-video.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-      <section className="mb-20 max-w-full lg:pl-20">
-        <h3 className="text-5xl font-bold mb-8">Our Services</h3>
+        <section className="mb-20 max-w-full lg:pl-20">
+          <h3 className="lg:text-5xl text-3xl font-bold mb-8">Our Services</h3>
 
-        <div className="relative">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={20}
-            breakpoints={{
-              640: {
-                slidesPerView: 1.2,
-              },
-              1024: {
-                slidesPerView: 3.2,
-              },
-            }}
-            navigation={{
-              nextEl: '.custom-swiper-next',
-              prevEl: '.custom-swiper-prev',
-            }}
-            modules={[Navigation]}
-            className="w-full h-full"
-          >
+          <div className="relative">
+            <Swiper
+              slidesPerView={1.2}
+              spaceBetween={20}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1.2,
+                },
+                1024: {
+                  slidesPerView: 3.2,
+                },
+              }}
+              navigation={{
+                nextEl: '.custom-swiper-next',
+                prevEl: '.custom-swiper-prev',
+              }}
+              modules={[Navigation]}
+              className="w-full h-full"
+            >
+              {[
+                {
+                  title: "CNC Milling",
+                  image: "/images/services/ene-engineering-cnc-milling-services-homepage.jpg"
+                },
+                {
+                  title: "CNC Turning",
+                  image: "/images/services/ene-engineering-cnc-turnung-services-homepage.jpg"
+                },
+                {
+                  title: "5-Axis CNC Machining",
+                  image: "/images/services/ene-engineering-5-axis-cnc-machining-services-homepage.jpg"
+                },
+                {
+                  title: "Finishing",
+                  image: "/images/services/ene-engineering-cnc-finishing-services-homepage.jpg"
+                },
+              ].map((service, index) => (
+                <SwiperSlide key={index} className="relative">
+                  <div className="absolute inset-0 bg-black opacity-30"></div>
+                  <img src={service.image} alt={service.title} className="w-full" />
+                  <div className="absolute flex flex-col justify-between left-0 bottom-0 top-0 z-10 p-6 text-white">
+                    <h4 className="text-2xl font-semibold">{service.title}</h4>
+                    <img className="w-10" src="/images/icons/arrow-right.svg" alt="" />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div className="flex gap-6 justify-end lg:mr-20 mt-6">
+              <button className="custom-swiper-prev">
+                <img src="/images/icons/left-icon.svg" alt="Previous" className="lg:w-16 w-10 rounded-full lg:h-16 h-10" />
+              </button>
+              <button className="custom-swiper-next">
+                <img src="/images/icons/right-icon.svg" alt="Next" className="lg:w-16 w-10 rounded-full lg:h-16 h-10" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="max-w-7xl mx-auto mb-20">
+          <h3 className="lg:text-5xl text-3xl font-bold mb-8">Why ENE</h3>
+          <div className="grid lg:grid-cols-3 gap-6">
             {[
               {
-                title: "CNC Milling",
-                image: "/images/services/ene-engineering-cnc-milling-services-homepage.jpg"
+                title: "Client-Centric",
+                text: "We don't just serve clients; we dedicate our resources and efforts to your specific goals, ensuring your needs drive every decision we make."
               },
               {
-                title: "CNC Turning",
-                image: "/images/services/ene-engineering-cnc-turnung-services-homepage.jpg"
+                title: "Proven Expertise & Quality",
+                text: "Our team has the specific skills and experience to deliver high-quality results—reliably. We deliver quality."
               },
               {
-                title: "5-Axis CNC Machining",
-                image: "/images/services/ene-engineering-5-axis-cnc-machining-services-homepage.jpg"
-              },
-              {
-                title: "Finishing",
-                image: "/images/services/ene-engineering-cnc-finishing-services-homepage.jpg"
-              },
-            ].map((service, index) => (
-              <SwiperSlide key={index} className="relative">
-                <div className="absolute inset-0 bg-black opacity-30"></div>
-                <img src={service.image} alt={service.title} className="w-full" />
-                <div className="absolute flex flex-col justify-between left-0 bottom-0 top-0 z-10 p-6 text-white">
-                  <h4 className="text-2xl font-semibold">{service.title}</h4>
-                  <img className="w-10" src="/images/icons/arrow-right.svg" alt="" />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="flex gap-6 justify-end mr-20 mt-6">
-            <button className="custom-swiper-prev">
-              <img src="/images/icons/left-icon.svg" alt="Previous" className="w-16 rounded-full h-16" />
-            </button>
-            <button className="custom-swiper-next">
-              <img src="/images/icons/right-icon.svg" alt="Next" className="w-16 rounded-full h-16" />
-            </button>
+                title: "Unwavering Support & Partnership",
+                text: "We are committed to your long-term success, offering dedicated support and communication. We are committed to you."
+              }
+            ].map((reason, index) => <div key={index} className="p-8 border-t bg-[#F0F0F0] border-black">
+              <img src="/images/icons/arrow-down-right-light1.svg" className="mb-8" alt="" />
+              <h4 className="text-xl lg:w-[60%] mb-12">{reason.title}</h4>
+              <p className="text-sm text-[#646569]">{reason.text}</p>
+            </div>)}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="max-w-7xl mx-auto mb-20">
-        <h3 className="text-5xl font-bold mb-8">Why ENE</h3>
-        <div className="grid grid-cols-3 gap-6">
-          {[
-            {
-              title: "Client-Centric",
-              text: "We don't just serve clients; we dedicate our resources and efforts to your specific goals, ensuring your needs drive every decision we make."
-            },
-            {
-              title: "Proven Expertise & Quality",
-              text: "Our team has the specific skills and experience to deliver high-quality results—reliably. We deliver quality."
-            },
-            {
-              title: "Unwavering Support & Partnership",
-              text: "We are committed to your long-term success, offering dedicated support and communication. We are committed to you."
-            }
-          ].map((reason, index) => <div key={index} className="p-8 border-t bg-[#F0F0F0] border-black">
-            <img src="/images/icons/arrow-down-right-light1.svg" className="mb-8" alt="" />
-            <h4 className="text-xl lg:w-[60%] mb-12">{reason.title}</h4>
-            <p className="text-sm text-[#646569]">{reason.text}</p>
-          </div>)}
-        </div>
-      </section>
+        <section className="max-w-7xl mx-auto mb-20">
+          <h3 className="lg:text-5xl text-3xl font-bold mb-8">Industries Served</h3>
+          <div className="border-t border-[#000000] grid lg:grid-cols-3">
+            {[
+              { icon: "/images/icons/airplane-light1.svg", label: "Aerospace" },
+              { icon: "/images/icons/car-profile-light1.svg", label: "Automotive" },
+              { icon: "/images/icons/hospital-light1.svg", label: "Medical" },
+              { icon: "/images/icons/drop-half-bottom-light1.svg", label: "Oil & Gas" },
+              { icon: "/images/icons/solar-panel-light1.svg", label: "Green Energy" },
+              { icon: "/images/icons/medal-military-light1.svg", label: "Defense" },
+            ].map((industry, idx) => (
+              <div key={industry.label} className="border-b border-black flex gap-8 px-4 py-8">
+                <img src={industry.icon} alt="" />
+                <p className="lg:text-3xl text-xl">{industry.label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-      <section className="max-w-7xl mx-auto mb-20">
-        <h3 className="text-5xl font-bold mb-8">Industries Served</h3>
-        <div className="border-t border-[#000000] grid grid-cols-3">
-          {[
-            { icon: "/images/icons/airplane-light1.svg", label: "Aerospace" },
-            { icon: "/images/icons/car-profile-light1.svg", label: "Automotive" },
-            { icon: "/images/icons/hospital-light1.svg", label: "Medical" },
-            { icon: "/images/icons/drop-half-bottom-light1.svg", label: "Oil & Gas" },
-            { icon: "/images/icons/solar-panel-light1.svg", label: "Green Energy" },
-            { icon: "/images/icons/medal-military-light1.svg", label: "Defense" },
-          ].map((industry, idx) => (
-            <div key={industry.label} className="border-b border-black flex gap-8 px-4 py-8">
-              <img src={industry.icon} alt="" />
-              <p className="text-3xl">{industry.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <section className="max-w-7xl mx-auto lg:p-20 lg:bg-[#F0F0F0] mb-20">
+          <h3 className="lg:text-5xl text-3xl font-bold mb-8">Our Process</h3>
+          {/* Mobile slider */}
+          <div className="block lg:hidden">
+            {/* Custom pagination state and swiper control */}
+            {(() => {
+              const [activeIdx, setActiveIdx] = React.useState(0);
+              const swiperRef = React.useRef<any>(null);
+              return (
+                <>
+                  <Swiper
+                    slidesPerView={1}
+                    spaceBetween={20}
+                    onSlideChange={swiper => setActiveIdx(swiper.activeIndex)}
+                    onSwiper={swiper => { swiperRef.current = swiper; }}
+                    className="w-full"
+                  >
+                    {process.map((single, index) => (
+                      <SwiperSlide key={index} className="">
+                        <div className="bg-[#F0F0F0] p-6">
+                          <p className="text-3xl w-[80%] mb-4">{single.title}</p>
+                          <p className="text-[#646569] mt-12">{single.text}</p>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  <div className="flex justify-between gap-2 mt-6">
+                    {process.map((single, idx) => (
+                      <button
+                        key={idx}
+                        className={`w-20 h-1 transition-all duration-200 ${activeIdx === idx ? 'bg-black' : 'bg-gray-300'}`}
+                        aria-label={single.title}
+                        onClick={() => {
+                          setActiveIdx(idx);
+                          if (swiperRef.current) {
+                            swiperRef.current.slideTo(idx);
+                          }
+                        }}
+                        style={{ outline: 'none', border: 'none' }}
+                      />
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
 
-      <section className="max-w-7xl mx-auto p-20 bg-[#F0F0F0] mb-20">
-        <h3 className="text-5xl font-bold mb-8">Our Process</h3>
-
-        <div className="grid grid-cols-4 gap-6">
-          {process.map((single, index) => <div key={index}>
-            <p className="text-xl lg:w-[60%] mb-4">{single.title}</p>
-            <p className="text-sm">{single.text}</p>
-          </div>)}
-        </div>
-      </section>
-
+          </div>
+          {/* Desktop grid */}
+          <div className="hidden lg:grid grid-cols-4 gap-6">
+            {process.map((single, index) => <div key={index}>
+              <p className="text-xl lg:w-[60%] mb-4">{single.title}</p>
+              <p className="text-sm">{single.text}</p>
+            </div>)}
+          </div>
+        </section>
+      </main>
       <FooterNav />
     </main>
   </>;
