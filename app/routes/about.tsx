@@ -60,7 +60,7 @@ const about = () => {
                         ].map((single, index) => <div key={index} className='p-10 bg-black text-white'>
                             <img className='mb-8' src="/images/icons/check-circle-light1.svg" alt="" />
                             <p className='text-xl mb-10 lg:w-[50%]'>{single.title}</p>
-                            <p>{single.text}</p>
+                            <p className='text-sm'>{single.text}</p>
                         </div>)}
                     </div>
                 </div>
