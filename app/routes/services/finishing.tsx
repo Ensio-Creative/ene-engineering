@@ -6,8 +6,8 @@ import type { Route } from './+types/finishing';
 
 export function meta({ }: Route.MetaArgs) {
     return [
-        { title: "5-Axis CNC Machining - Ene Engineering" },
-        { name: "description", content: "5-Axis CNC Machining services by Ene Engineering!" },
+        { title: "Finishing - Ene Engineering" },
+        { name: "description", content: "Finishing services by Ene Engineering!" },
     ];
 }
 
@@ -46,7 +46,7 @@ export default function Finishing() {
                             </ul>
                         </div>
                         <div>
-                            <img src="/images/ene-engineering-cnc-turning-services.jpg" alt="" />
+                            <img src="/images/ene-engineering-cnc-finishing-services.jpg" alt="" />
                         </div>
                     </div>
 

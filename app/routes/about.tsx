@@ -29,7 +29,7 @@ const about = () => {
                         </p>
                     </div>
                 </section>
-                <section className='bg-[#F0F0F0] lg:py-32 py-20'>
+                <section className='bg-[#F0F0F0] py-20'>
                     <div className='max-w-7xl mx-auto'>
                         <h3 className='lg:text-5xl text-3xl font-bold mb-8 lg:text-left text-center'>Our Ethos</h3>
                         <div className='grid lg:grid-cols-3 gap-6'>

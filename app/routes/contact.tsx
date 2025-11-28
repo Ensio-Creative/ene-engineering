@@ -34,7 +34,7 @@ const contact = () => {
                             enquiries@ene-eng.com</p>
                     </div>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 my-20'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 mt-20 mb-32'>
                     <div className='lg:border-x border-black px-4 mb-8 lg:mb-0'>
                         <p className='text-3xl mb-4 lg:mb-0'>Find us on the map</p>
                     </div>

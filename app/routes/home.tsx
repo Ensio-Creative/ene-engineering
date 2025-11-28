@@ -64,18 +64,20 @@ export default function Home() {
         <div className="bg-black opacity-70 absolute inset-0 z-10"></div>
         <div className="relative z-10 text-white mb-10">
           <h1 className="text-3xl md:text-6xl font-bold leading-tight mb-6">Excellence in precision<br />engineering & <br /> manufacturing</h1>
-          <button className="bg-white text-black px-6 py-3 rounded-full transition">Request A Quote</button>
+          <Link to={"/contact"}>
+            <button className="bg-white text-black px-6 py-3 rounded-full transition">Request A Quote</button>
+          </Link>
         </div>
       </section>
 
       <section className="max-w-5xl mx-auto py-20 px-6 text-center">
         <h2 className="text-xs mb-6">WE ARE ENE ENGINEERING</h2>
-        <p className="lg:text-5xl text-3xl font-light mb-12">At ENE Engineering, we help industries worldwide innovate faster and operate more efficiently through advanced precision engineering.</p>
+        <p className="lg:text-5xl text-3xl font-light leading-tight mb-12">At ENE Engineering, we help industries worldwide innovate faster and operate more efficiently through advanced precision engineering.</p>
       </section>
 
       <main className="lg:mx-0 mx-4">
         <div className="max-w-7xl mx-auto">
-          <video className="w-full mb-20" autoPlay loop muted>
+          <video className="w-full mb-20 lg:h-[80vh] object-cover" autoPlay loop muted>
             <source src="/images/ene-engineering-video.mp4" type="video/mp4" />
           </video>
         </div>
@@ -136,7 +138,7 @@ export default function Home() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="flex gap-6 justify-end lg:mr-20 mt-6">
+            <div className="flex gap-2 justify-end lg:mr-20 mt-6">
               <button className="custom-swiper-prev">
                 <img src="/images/icons/left-icon.svg" alt="Previous" className="lg:w-16 w-10 rounded-full lg:h-16 h-10" />
               </button>
@@ -163,7 +165,7 @@ export default function Home() {
                 title: "Unwavering Support & Partnership",
                 text: "We are committed to your long-term success, offering dedicated support and communication. We are committed to you."
               }
-            ].map((reason, index) => <div key={index} className="p-8 border-t bg-[#F0F0F0] border-black">
+            ].map((reason, index) => <div key={index} className="p-8 pb-12 border-t bg-[#F0F0F0] border-black">
               <img src="/images/icons/arrow-down-right-light1.svg" className="mb-8" alt="" />
               <h4 className="text-xl lg:w-[60%] mb-12">{reason.title}</h4>
               <p className="text-sm text-[#646569]">{reason.text}</p>

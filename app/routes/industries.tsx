@@ -55,13 +55,13 @@ const industries = () => {
     <main>
       <HeaderNav />
       <HeroComp title='Industries' image='/images/ene-engineering-industries-header.jpg' />
-      <section className='max-w-7xl mx-auto px-6 py-20'>
+      <section className='max-w-7xl mx-auto px-6 lg:py-32 py-20'>
         <div className='flex'>
           <div className='lg:w-[30%] space-y-6 text-[#C3C3C3] lg:block hidden sticky top-32 h-fit'>
             {industryList.map((industry, idx) => (
               <button
                 key={industry.name}
-                className={`border-l border-[#C3C3C3] pl-4 w-full text-left focus:outline-none transition-colors duration-200 ${activeIdx === idx ? 'text-black font-semibold' : 'hover:text-black'}`}
+                className={`border-l text-lg border-[#C3C3C3] pl-4 w-full text-left focus:outline-none transition-colors duration-200 ${activeIdx === idx ? 'text-black font-semibold border-black' : 'hover:text-black'}`}
                 onClick={() => handleScrollTo(idx)}
               >
                 {industry.name}
