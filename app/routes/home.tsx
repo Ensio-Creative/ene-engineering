@@ -184,7 +184,7 @@ export default function Home() {
         </section>
 
         <section className="max-w-7xl mx-auto lg:p-20 lg:bg-[#F0F0F0] mb-20">
-          <h3 className="lg:text-5xl text-3xl font-bold mb-8">Our Process</h3>
+          <h3 className="lg:text-5xl text-3xl font-bold mb-10">Our Process</h3>
           {/* Mobile slider */}
           <div className="block lg:hidden">
             {/* Custom pagination state and swiper control */}
@@ -231,10 +231,10 @@ export default function Home() {
 
           </div>
           {/* Desktop grid */}
-          <div className="hidden lg:grid grid-cols-4 gap-6">
+          <div className="hidden lg:grid grid-cols-4 gap-8">
             {process.map((single, index) => <div key={index}>
-              <p className="text-xl lg:w-[60%] mb-4">{single.title}</p>
-              <p className="text-sm">{single.text}</p>
+              <p className="text-2xl lg:w-[70%] mb-8">{single.title}</p>
+              <p className="text-sm text-[#646569]">{single.text}</p>
             </div>)}
           </div>
         </section>
