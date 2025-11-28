@@ -18,33 +18,33 @@ const FooterNav = () => {
             </section>
 
             {/* Footer Section */}
-            <footer className="bg-black text-white py-16 lg:px-10">
-                <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div className='border-x flex flex-col justify-between border-white px-6'>
-                        <img className='w-44' src="/images/ene-engineering-footer-logo.svg" alt="ENE Engineering Logo" />
-                        <span className='text-[#949494] text-xs'>© 2025 ENE Engineering. All rights reserved.</span>
+            <footer className="bg-black text-white py-16 lg:px-10 px-4">
+                <div className="max-w-full mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 lg:border-none border-x px-4 lg:px-0 border-white">
+                    <div className='lg:border-x flex flex-col lg:col-span-1 col-span-2 justify-between border-white px-6'>
+                        <img className='lg:w-44 w-20' src="/images/ene-engineering-footer-logo.svg" alt="ENE Engineering Logo" />
+                        <span className='text-[#949494] lg:block hidden text-xs'>© 2025 ENE Engineering. All rights reserved.</span>
                     </div>
-                    <div className='border-r border-white'>
-                        <h4 className="text-xs mb-6">Explore</h4>
-                        <ul className="space-y-3">
+                    <div className='lg:border-r border-white'>
+                        <h4 className="text-sm lg:mb-6 mb-4">Explore</h4>
+                        <ul className="space-y-3 lg:text-base text-sm">
                             <li>About us</li>
                             <li>Services</li>
                             <li>Industries</li>
                             <li>Contact us</li>
                         </ul>
                     </div>
-                    <div className='border-r border-white'>
-                        <h4 className="text-xs mb-6">Services</h4>
-                        <ul className="space-y-3">
+                    <div className='lg:border-r border-white'>
+                        <h4 className="text-sm lg:mb-6 mb-4">Services</h4>
+                        <ul className="space-y-3 lg:text-base text-sm">
                             <li>CNC Milling</li>
                             <li>CNC Turning</li>
                             <li>5-Axis CNC Machining</li>
                             <li>Finishing</li>
                         </ul>
                     </div>
-                    <div className='border-r border-white'>
-                        <h4 className="text-xs mb-6">Get In Touch</h4>
-                        <address className="not-italic leading-relaxed">
+                    <div className='lg:border-r border-white lg:col-span-1 col-span-2'>
+                        <h4 className="text-sm lg:mb-6 mb-4">Get In Touch</h4>
+                        <address className="not-italic leading-relaxed lg:text-base text-sm">
                             CNC Unit G1,<br />
                             Kingston Business Park,<br />
                             Kingston Bagpuize,<br />
@@ -52,8 +52,8 @@ const FooterNav = () => {
                             <br />
                             +44(0) 1865 821 878
                         </address>
+                        <span className='text-[#949494] block lg:hidden text-xs mt-10'>© 2025 ENE Engineering. All rights reserved.</span>
                         <span className='text-xs text-[#949494]'>Site by Ensio Creative</span>
-
                     </div>
                 </div>
 
