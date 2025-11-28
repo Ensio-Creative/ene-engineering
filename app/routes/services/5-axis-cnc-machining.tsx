@@ -9,7 +9,7 @@ export default function FiveAxisCncMachining() {
             <HeaderNav />
             <main>
                 <div>
-                    <h1 className="text-5xl font-bold mb-6 lg:px-10 mt-20">5-Axis CNC Machining </h1>
+                    <h1 className="lg:text-5xl text-4xl px-4 font-bold mb-6 lg:px-10 mt-20">5-Axis CNC Machining </h1>
                     <img src="/images/services/ene-engineering-5-axis-cnc-machining-services-header.jpg" alt="5-Axis CNC Machining" className="w-full object-cover mb-12" />
                 </div>
                 {/* Other Services Section */}

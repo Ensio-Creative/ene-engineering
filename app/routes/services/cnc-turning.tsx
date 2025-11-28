@@ -9,7 +9,7 @@ export default function CncTurning() {
             <HeaderNav />
             <main>
                 <div>
-                    <h1 className="text-5xl font-bold mb-6 lg:px-10 mt-20">CNC Turning </h1>
+                    <h1 className="lg:text-5xl text-4xl px-4 font-bold mb-6 lg:px-10 mt-20">CNC Turning </h1>
                     <img src="/images/services/ene-engineering-cnc-turning-services-header.jpg" alt="CNC Turning" className="w-full object-cover mb-12" />
                 </div>
                 {/* Other Services Section */}
