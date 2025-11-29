@@ -6,8 +6,8 @@ import type { Route } from './+types/cnc-milling';
 
 export function meta({ }: Route.MetaArgs) {
     return [
-        { title: "CNC Milling - Ene Engineering" },
-        { name: "description", content: "CNC Milling services by Ene Engineering!" },
+        { title: "CNC Milling - ENE Engineering" },
+        { name: "description", content: "CNC Milling services by ENE Engineering!" },
     ];
 }
 
@@ -17,11 +17,11 @@ export default function CncMilling() {
             <HeaderNav />
             <main>
                 <div>
-                    <h1 className="lg:text-5xl text-4xl px-4 font-bold mb-6 lg:px-10 mt-20">CNC Milling</h1>
+                    <h1 className="lg:text-5xl text-4xl px-4 font-bold mb-6 lg:px-10 lg:mt-20 mt-10">CNC Milling</h1>
                     <img src="/images/services/ene-engineering-cnc-milling-services-header.jpg" alt="CNC Milling" className="w-full lg:h-full h-[50vh] object-cover mb-12" />
                 </div>
 
-                <section className="max-w-7xl mx-auto px-4 py-20">
+                <section className="max-w-7xl mx-auto px-4 lg:py-20 py-10">
                     <div className='grid lg:grid-cols-2 gap-10'>
                         <div className='my-auto lg:text-lg text-[#646569]'>
                             Our comprehensive CNC milling services are designed to transform your most ambitious designs into tangible, high-quality components. Whether you're developing straightforward prototypes for initial testing or engineering intricate precision parts with complex geometries, we have the advanced machining capabilities to meet your exact specifications.
@@ -38,7 +38,7 @@ export default function CncMilling() {
                 </section>
 
                 {/* Other Services Section */}
-                <section className="max-w-7xl mx-auto px-4 py-20">
+                <section className="max-w-7xl mx-auto px-4 lg:py-20 py-10">
                     <h2 className="lg:text-5xl text-3xl font-bold mb-8">Other Services</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <Link to="/services/cnc-turning" className="bg-[#F0F0F0] border-l border-black p-8">

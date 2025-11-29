@@ -5,8 +5,8 @@ import type { Route } from './+types/contact';
 
 export function meta({ }: Route.MetaArgs) {
     return [
-        { title: "Contact Us - Ene Engineering" },
-        { name: "description", content: "Get in touch with Ene Engineering!" },
+        { title: "Contact Us - ENE Engineering" },
+        { name: "description", content: "Get in touch with ENE Engineering!" },
     ];
 }
 

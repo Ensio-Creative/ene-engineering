@@ -6,8 +6,8 @@ import type { Route } from './+types/5-axis-cnc-machining';
 
 export function meta({ }: Route.MetaArgs) {
     return [
-        { title: "5-Axis CNC Machining - Ene Engineering" },
-        { name: "description", content: "5-Axis CNC Machining services by Ene Engineering!" },
+        { title: "5-Axis CNC Machining - ENE Engineering" },
+        { name: "description", content: "5-Axis CNC Machining services by ENE Engineering!" },
     ];
 }
 
@@ -17,11 +17,11 @@ export default function FiveAxisCncMachining() {
             <HeaderNav />
             <main>
                 <div>
-                    <h1 className="lg:text-5xl text-4xl px-4 font-bold mb-6 lg:px-10 mt-20">5-Axis CNC Machining </h1>
+                    <h1 className="lg:text-5xl text-4xl px-4 font-bold mb-6 lg:px-10 lg:mt-20 mt-10">5-Axis CNC Machining </h1>
                     <img src="/images/services/ene-engineering-5-axis-cnc-machining-services-header.jpg" alt="5-Axis CNC Machining" className="w-full lg:h-full h-[50vh] object-cover mb-12" />
                 </div>
 
-                <section className="max-w-7xl mx-auto px-4 py-20">
+                <section className="max-w-7xl mx-auto px-4 lg:py-20 py-10">
                     <div className='grid lg:grid-cols-2 gap-10'>
                         <div className='my-auto lg:text-lg text-[#646569]'>
                             Our advanced 5-axis CNC machining services deliver the precision and complexity your most challenging projects demand. When standard 3-axis machining falls short, our 5-axis capabilities unlock new possibilities for intricate geometries, compound angles, and sophisticated features that would otherwise require multiple setups or prove impossible to manufacture.
@@ -58,7 +58,7 @@ export default function FiveAxisCncMachining() {
                 </section>
 
                 {/* Other Services Section */}
-                <section className="max-w-7xl mx-auto px-4 py-20">
+                <section className="max-w-7xl mx-auto px-4 lg:py-20 py-10">
                     <h2 className="lg:text-5xl text-3xl font-bold mb-8">Other Services</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <Link to="/services/cnc-milling" className="bg-[#F0F0F0] border-l border-black p-8">

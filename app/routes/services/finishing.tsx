@@ -6,8 +6,8 @@ import type { Route } from './+types/finishing';
 
 export function meta({ }: Route.MetaArgs) {
     return [
-        { title: "Finishing - Ene Engineering" },
-        { name: "description", content: "Finishing services by Ene Engineering!" },
+        { title: "Finishing - ENE Engineering" },
+        { name: "description", content: "Finishing services by ENE Engineering!" },
     ];
 }
 
@@ -17,13 +17,13 @@ export default function Finishing() {
             <HeaderNav />
             <main>
                 <div>
-                    <h1 className="lg:text-5xl text-4xl font-bold mb-6 lg:px-10 px-4 mt-20">Finishing</h1>
+                    <h1 className="lg:text-5xl text-4xl font-bold mb-6 lg:px-10 px-4 lg:mt-20 mt-10">Finishing</h1>
                     <img src="/images/services/ene-engineering-cnc-finishing-services-header.jpg" alt="Finishing" className="w-full lg:h-full h-[50vh] object-cover mb-12" />
                 </div>
 
 
 
-                <section className="max-w-7xl mx-auto px-4 py-20">
+                <section className="max-w-7xl mx-auto px-4 lg:py-20 py-10">
                     <div className='grid lg:grid-cols-2 gap-10'>
                         <div className='my-auto lg:text-lg text-[#646569]'>
                             We understand that exceptional machining is only part of the equation, your components need to arrive ready for immediate use. That's why we offer comprehensive finishing services that transform precision-machined parts into complete, application-ready products.
@@ -53,7 +53,7 @@ export default function Finishing() {
                 </section>
 
                 {/* Other Services Section */}
-                <section className="max-w-7xl mx-auto px-4 py-20">
+                <section className="max-w-7xl mx-auto px-4 lg:py-20 py-10">
                     <h2 className="lg:text-5xl text-3xl font-bold mb-8">Other Services</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <Link to="/services/cnc-milling" className="bg-[#F0F0F0] border-l border-black p-8">

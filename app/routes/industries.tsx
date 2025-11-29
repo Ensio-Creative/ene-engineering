@@ -6,8 +6,8 @@ import type { Route } from './+types/industries';
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: " Industries - Ene Engineering" },
-    { name: "description", content: "Explore the industries we serve at Ene Engineering!" },
+    { title: " Industries - ENE Engineering" },
+    { name: "description", content: "Explore the industries we serve at ENE Engineering!" },
   ];
 }
 
@@ -55,7 +55,7 @@ const industries = () => {
     <main>
       <HeaderNav />
       <HeroComp title='Industries' image='/images/ene-engineering-industries-header.jpg' />
-      <section className='max-w-7xl mx-auto px-6 lg:py-32 py-20'>
+      <section className='max-w-7xl mx-auto px-4 lg:py-32 py-20'>
         <div className='flex'>
           <div className='lg:w-[30%] space-y-6 text-[#C3C3C3] lg:block hidden sticky top-32 h-fit'>
             {industryList.map((industry, idx) => (
@@ -75,7 +75,7 @@ const industries = () => {
                 ref={industryRefs.current[idx]}
                 className='mb-20 scroll-mt-32'
               >
-                <img src={`/images/industries/${industry.image}`} alt={industry.name} className='w-full mb-6' />
+                <img src={`/images/industries/${industry.image}`} alt={industry.name} className='w-full mb-6 lg:h-full h-[200px] object-cover' />
                 <h3 className='text-2xl mb-4'>{industry.name}</h3>
                 <p className='text-[#646569]'>{industry.description}</p>
               </div>

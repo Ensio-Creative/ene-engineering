@@ -8,12 +8,15 @@ const FooterNav = () => {
                 <div className="absolute inset-0 w-full h-full">
                     <img src="/images/ene-engineering-cta.jpg" alt="CTA Background" className="w-full h-full object-cover opacity-60" />
                 </div>
-                <div className="relative z-10 flex justify-center items-center">
-                    <div className="bg-white opacity-85 shadow h-[40vh] text-center w-full max-w-xl mx-auto"></div>
-                    <div className='absolute text-center max-w-xl mx-auto'>
-                        <h3 className="text-2xl font-bold mb-4">Ready for your project?</h3>
-                        <p className="text-lg mb-6">Our engineers are standing by <br /> to provide honest technical feedback and <br /> transparent quotes.</p>
-                        <button className="bg-black text-white px-6 py-2 rounded-full font-semibold shadow transition">Let's get started</button>
+                <div className="relative z-10 flex justify-center items-center lg:m-0 m-4">
+                    <div className="bg-white opacity-85 shadow h-[50vh] text-center w-full max-w-xl mx-auto"></div>
+                    <div className='absolute text-center max-w-xl mx-auto lg:p-0 p-4'>
+                        <h3 className="text-3xl font-bold mb-4">Ready for your project?</h3>
+                        <p className="text-lg mb-6 lg:w-1/2 mx-auto">Our engineers are standing by to provide honest technical feedback and transparent quotes.</p>
+                       <Link to="/contact">
+                           <button className="bg-black text-white px-6 py-2 rounded-full font-semibold shadow transition">Let's get started</button>
+                       </Link>
+                        {/* <button className="bg-black text-white px-6 py-2 rounded-full font-semibold shadow transition">Let's get started</button> */}
                     </div>
                 </div>
             </section>
@@ -21,7 +24,7 @@ const FooterNav = () => {
             {/* Footer Section */}
             <footer className="bg-black text-white py-32 lg:px-10 px-4">
                 <div className="max-w-full mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 lg:border-none border-x px-4 lg:px-0 border-white">
-                    <div className='lg:border-x flex flex-col lg:col-span-1 col-span-2 justify-between border-white px-6'>
+                    <div className='lg:border-x flex flex-col lg:col-span-1 col-span-2 justify-between border-white lg:px-6 lg:mb-0 mb-10'>
                         <img className='lg:w-32 w-20' src="/images/ene-engineering-footer-logo.svg" alt="ENE Engineering Logo" />
                         <span className='text-[#949494] lg:block hidden text-xs'>© 2025 ENE Engineering. All rights reserved.</span>
                     </div>
