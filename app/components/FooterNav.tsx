@@ -22,7 +22,7 @@ const FooterNav = () => {
             </section>
 
             {/* Footer Section */}
-            <footer className="bg-black text-white py-32 lg:px-10 px-4">
+            <footer className="bg-black text-white lg:py-32 py-20 lg:px-10 px-4">
                 <div className="max-w-full mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 lg:border-none border-x px-4 lg:px-0 border-white">
                     <div className='lg:border-x flex flex-col lg:col-span-1 col-span-2 justify-between border-white lg:px-6 lg:mb-0 mb-10'>
                         <img className='lg:w-32 w-20' src="/images/ene-engineering-footer-logo.svg" alt="ENE Engineering Logo" />
@@ -30,7 +30,7 @@ const FooterNav = () => {
                     </div>
                     <div className='lg:border-r border-white'>
                         <h4 className="text-sm lg:mb-6 mb-4">Explore</h4>
-                        <ul className="space-y-3 lg:text-base text-sm">
+                        <ul className="space-y-3 text-base">
                             <li><Link to="/about" className="">About us</Link></li>
                             <li><Link to="/" className="">Services</Link></li>
                             <li><Link to="/industries" className="">Industries</Link></li>
@@ -39,7 +39,7 @@ const FooterNav = () => {
                     </div>
                     <div className='lg:border-r border-white'>
                         <h4 className="text-sm lg:mb-6 mb-4">Services</h4>
-                        <ul className="space-y-3 lg:text-base text-sm">
+                        <ul className="space-y-3 text-base">
                             <li><Link to="/services/cnc-milling" className="">CNC Milling</Link></li>
                             <li><Link to="/services/cnc-turning" className="">CNC Turning</Link></li>
                             <li><Link to="/services/5-axis-cnc-machining" className="">5-Axis CNC Machining</Link></li>
@@ -48,7 +48,7 @@ const FooterNav = () => {
                     </div>
                     <div className='lg:border-r border-white lg:col-span-1 col-span-2'>
                         <h4 className="text-sm lg:mb-6 mb-4">Get In Touch</h4>
-                        <address className="not-italic leading-relaxed lg:text-base text-sm">
+                        <address className="not-italic leading-relaxed text-base">
                             CNC Unit G1,<br />
                             Kingston Business Park,<br />
                             Kingston Bagpuize,<br />
@@ -57,7 +57,7 @@ const FooterNav = () => {
                             +44(0) 1865 821 878
                         </address>
                         <span className='text-[#949494] block lg:hidden text-xs mt-10'>© 2025 ENE Engineering. All rights reserved.</span>
-                        <p className='text-xs text-[#949494] lg:pt-10'>Site by Ensio Creative</p>
+                        <p className='text-xs text-[#949494] lg:pt-10'>Site by <a href="https://www.ensiocreative.co" target="_blank" rel="noopener noreferrer">Ensio Creative</a></p>
                     </div>
                 </div>
 

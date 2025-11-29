@@ -38,8 +38,9 @@ const contact = () => {
                     <div className='lg:border-x border-black px-4 mb-8 lg:mb-0'>
                         <p className='text-3xl mb-4 lg:mb-0'>Find us on the map</p>
                     </div>
-                    <div className='lg:border-r border-black px-4 col-span-1 lg:col-span-2'>
-                        <img src="/images/map.jpg" className='w-full lg:pr-2' alt="" />
+                    <div className='lg:border-r border-black px-4 col-span-1 lg:col-span-2 '>
+                        <iframe className='lg:pr-4' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2474.164043916334!2d-1.4120842232150395!3d51.67514027185198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c9df80fcba09%3A0x545c601a80f557b5!2sKingston%20Business%20Park%2C%20Kingston%20Bagpuize%2C%20Abingdon%20OX13%205AS%2C%20UK!5e0!3m2!1sen!2sng!4v1764397632152!5m2!1sen!2sng" width="100%" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        {/* <img src="/images/map.jpg" className='w-full lg:pr-2' alt="" /> */}
                     </div>
                 </div>
             </main>
